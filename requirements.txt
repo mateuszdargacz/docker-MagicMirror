@@ -1,2 +1,1 @@
 mmpm==2.9
-/Users/mateusz/PycharmProjects/my_mirror/docker-compose.yml
