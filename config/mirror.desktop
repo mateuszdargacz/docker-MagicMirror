@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=MagicMirror
+Comment=
+Exec=chromium-browser --start-fullscreen http://localhost:8080
+StartupNotify=false
+Terminal=true
+Hidden=false
