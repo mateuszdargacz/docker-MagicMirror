@@ -1,0 +1,20 @@
+version: '3'
+services:
+  magicmirror:
+    container_name: magicmirror
+    build: .
+    restart: unless-stopped
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ="Poland"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./config:/opt/magic_mirror/config
+      - ./modules:/opt/magic_mirror/modules
+      - ./credentials_google_speach.json:/opt/credentials_google_speach.json
+#    devices:
+#      # should work on linux
+#      - /dev/snd:/dev/snd
+    ports:
+      - 8080:8080

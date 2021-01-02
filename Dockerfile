@@ -2,8 +2,7 @@ FROM node:12-buster
 
 RUN set -e; \
     apt update; \
-    apt install -y gettext; \
-    rm -rf /var/lib/apt/lists/*
+    apt install -y gettext;
 
 ARG branch=master
 
@@ -14,6 +13,8 @@ RUN git clone --depth 1 -b ${branch} https://github.com/MichMich/MagicMirror.git
 RUN cp -R modules /opt/default_modules
 RUN cp -R config /opt/default_config
 RUN npm install --unsafe-perm --silent
+# voice drivers
+RUN apt-get install -y mpg123
 
 COPY mm-docker-config.js docker-entrypoint.sh ./
 RUN chmod +x ./docker-entrypoint.sh
