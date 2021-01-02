@@ -121,6 +121,7 @@ I'm happy to accept Pull Requests! Please note that this project is released wit
 
 
 # ISSUES
+### raspberry run on startup: copy config/mirror.desktop to /home/pi/.config/autostart/
 ## setup:
 Error: Failed to load gRPC binary module because it was not installed for the current system
 solution : module dependencies were installed per different system than the docker image - simple enter the container and run `npm rebuild`  in the module's dir
